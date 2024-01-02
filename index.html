@@ -9,68 +9,121 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8A/wA+rtPHgj6e0W2uL7V3aDfnyIfA1" crossorigin="anonymous">
+
 </head>
 
 <body>
-     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
         <a class="navbar-brand" href="#"><img src="assets/google.png" style="width: 50%;" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
-      
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Fields
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">AI fields</a>
-                <a class="dropdown-item" href="#">Jobs</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Future</a>
-              </div>
-            </li>
-          
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Fields
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">AI fields</a>
+                        <a class="dropdown-item" href="#">Jobs</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Future</a>
+                    </div>
+                </li>
+                <!-- New Contact Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="toggleContactForm()">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-      </nav>
+    </nav>
+    
+    <center>
+        <div id="contactFormContainer" class="form-container formStyle" style="display: none;">
+            <br><br>
+            <form id="myForm">
+                <label for="name">Name:</label><br>
+                <input class="myInput" type="text" id="name" name="name"><br><br>
+    
+                <label for="email">Email:</label><br>
+                <input class="myInput" type="text" id="email" name="email"><br><br>
+    
+                <label for="organization">Organization:</label><br>
+                <input class="myInput" type="text" id="organization" name="organization"><br><br>
+    
+                <label for="description">Description and opinions:</label><br>
+                <textarea class="myTextArea" id="description" name="description" ></textarea><br><br>
+    
+                <input class="myInput" type="checkbox" id="terms">
+                <label for="terms">Agree to terms and conditions</label><br><br>
+    
+                <button class="myButton" type="button" id="submitBtn" disabled>Submit</button>
+            </form>
+            <br><br>
+        </div>
+    </center>
+    
+    
+    
+    <script>
+        function toggleContactForm() {
+            var formContainer = document.getElementById("contactFormContainer");
+            if (formContainer.style.display === "none") {
+                formContainer.style.display = "block";
+            } else {
+                formContainer.style.display = "none";
+            }
+        }
+    </script>
 
-    <!-- Carousel Section -->
-   <!-- Carousel Section -->
-   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+
+<!-- Carousel Section -->
+ 
+<div id="carouselExampleSlidesOnly" class="carousel slide" >
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100"
-                src="assets/pexels-lj-2085831.jpg" style="height: 700px;"
+                src="assets/pexels-lj-2085831.jpg" style="height: 600px; "
                 alt="First slide">
         </div>
         <div class="carousel-item">
             <img class="d-block w-100"
-                src="assets/pexels-michelangelo-buonarroti-8728382.jpg"style="height: 700px;"
+                src="assets/pexels-michelangelo-buonarroti-8728382.jpg" style="height: 0px;"
                 alt="Second slide">
         </div>
-        <!-- Add more carousel items as needed -->
     </div>
+    
+  
+  
 </div>
     <!-- Jumbotron -->
     
     <div class="jumbotron" style="color: blueviolet;">
-        <h1 class="display-2" style="color: blueviolet;">WELCOME TO THE WORLD OF AI!</h1>
+        <h1 class="display-2" style="color: rgb(151, 131, 170);">WELCOME TO THE WORLD OF AI!</h1>
         <p class="lead">Artificial Intelligence and Machine Learning are continuing to transform our world.</p>
     </div>
+    <style>
+       
+        @media screen and (max-width: 768px) {
+            
+            .display-2 {
+               
+            }
+        }
+    </style>
 
     <!-- 3 Columns with Image, Text, and Card -->
     <div class="container" style="padding-bottom: 30px;">
@@ -308,7 +361,22 @@ Future applications are expected to bring about enormous changes, but AI is alre
             </div>
         </div>
     </div>
+    <br><br>
 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
     <!-- Footer Section -->
     <footer class="" style="padding: 40px 80px; width: 100%; background-color: rgb(170, 204, 235);">
         <div class="row align-items-center">
@@ -342,16 +410,16 @@ Future applications are expected to bring about enormous changes, but AI is alre
             
         </div>
     </footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-d4Pqzq2l+QlFX6WF0vBRy3z3/Z9I/G+eRUissIT2cE+3UvJsntQ4CebE7DQCpD" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8A/wA+rtPHgj6e0W2uL7V3aDfnyIfA1" crossorigin="anonymous"></script>
 
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="add.js">
+    <script src="form.js">
     </script>
-
-<!-- Your HTML code -->
-
 </body>
 
 
